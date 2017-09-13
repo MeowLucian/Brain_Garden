@@ -44,3 +44,9 @@ manage.py makemigrations
 ```
 manage.py migrate
 ```
+
+## Change Time Zone
+Edit settings.py
+```
+TIME_ZONE = 'Asia/Taipei'
+```
