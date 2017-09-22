@@ -19,5 +19,5 @@ from posts.views import post_create, post_list, post_detail, post_update, post_d
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^posts/', include("posts.urls")),
+    url(r'^posts/', include("posts.urls", namespace='posts')),
 ]
