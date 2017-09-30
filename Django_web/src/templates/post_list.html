@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{title}} is working!</h1>
+<h1>{{title}}</h1>
 
 {% for obj in object_list %}
-{% url "posts:detail" id=obj.id %}
-<a href='{{ obj.get_absolute_url }}'>{{obj.title}}</a><br/>
-{{obj.content}}<br/>
-{{obj.timestamp}}<br/>
-{{obj.updated}}<br/>
-{{obj.id}}<br/>
-
+<div class="card" style="width: 20rem;">
+    <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+    <div class="card-body">
+      <h4 class="card-title"><a href='{{ obj.get_absolute_url }}'>{{obj.title}}</a> <small>{{obj.timestamp|timesince}} ago</small></h4>
+      <p class="card-text">{{obj.content|linebreaks|truncatechars:30}}</p>
+      <a href="{{ obj.get_absolute_url }}" class="btn btn-primary">View</a>
+    </div>
+</div>
 {% endfor %}
 
 {% endblock content %}
