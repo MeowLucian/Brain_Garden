@@ -5,7 +5,9 @@
 
 {% for obj in object_list %}
 <div class="card" style="width: 20rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+  {% if obj.image %}
+  <img src="{{ obj.image.url }}" class="img-responsive" />
+  {% endif %}
   <div class="card-body">
     <h4 class="card-title"><a href='{{ obj.get_absolute_url }}'>{{obj.title}}</a> <small>{{obj.timestamp|timesince}} ago</small></h4>
     <p class="card-text">{{obj.content|linebreaks|truncatechars:30}}</p>
