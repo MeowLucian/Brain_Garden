@@ -10,6 +10,9 @@
   {% endif %}
   <div class="card-body">
     <h4 class="card-title"><a href='{{ obj.get_absolute_url }}'>{{obj.title}}</a> <small>{{obj.timestamp|timesince}} ago</small></h4>
+    {% if obj.user %}
+    <p>Auther: {{obj.user}}</p>
+    {% endif %}
     <p class="card-text">{{obj.content|linebreaks|truncatechars:30}}</p>
     <a href="{{ obj.get_absolute_url }}" class="btn btn-primary">View</a>
   </div>
