@@ -50,3 +50,8 @@ Edit settings.py
 ```
 TIME_ZONE = 'Asia/Taipei'
 ```
+
+## Install Pillow
+```
+pip install pillow
+```
