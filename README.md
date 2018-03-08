@@ -1,6 +1,6 @@
 # Brain_Garden
 
-My Blog Website : https://meowlucian.github.io/Brain_Garden/
+My Blog Website : https://meowlucian.github.io/Django_Blog/
 
 ![Blog Front](ReadmePictures/Front.png)
 
